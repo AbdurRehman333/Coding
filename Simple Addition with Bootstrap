@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        #mybutton{
+            /* padding:1px; */
+            padding : 5px 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="container">
+
+        <h2>Calculator</h2>
+        <label class="form-label">Enter First Number:</label>
+        <input id="int1" class="form-control" type="text" placeholder="Input Digit..."
+            aria-label="default input example">
+
+
+        <label class="form-label">Enter Second Number:</label>
+        <input id="int2" class="form-control" type="text" placeholder="Input Digit..."
+            aria-label="default input example">
+
+        <button id="mybutton" type="button" class="btn btn-dark"
+            onclick="add(document.getElementById('int1').value, document.getElementById('int2').value)">Add</button>
+        <br />
+        <h2 class="display-5" id="result"></h2>
+
+    </form>
+
+
+    <hr>
+
+
+</body>
+
+<script>
+    function add(int1, int2) {
+        int1 = parseInt(int1);
+        int2 = parseInt(int2);
+        document.getElementById("result").innerHTML = int1 + int2;
+    }
+</script>
+
+</html>
